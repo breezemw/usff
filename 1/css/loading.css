@@ -1,0 +1,52 @@
+:root {
+    --loading-bg: rgba(255, 255, 255, 0);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --loading-bg: rgba(0, 0, 0, 0);
+    }
+}
+
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-logo {
+    width: 150px;
+    animation: zoomFloat 1.2s infinite ease-in-out;
+    opacity: 0.9;
+    will-change: transform, opacity;
+}
+
+@keyframes zoomFloat {
+    0% {
+        transform: scale(0.8) translateY(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.3) translateY(-15px);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8) translateY(0);
+        opacity: 0.5;
+    }
+}
+
+.loading-container.fade-out {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+}

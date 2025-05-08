@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact USF Malawi">
+  <meta property="og:title" content="Contact Us - USF Malawi">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Contact Us - USF Malawi</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo/logo-1.png" alt="USF Malawi Logo">
+        <span>USF Malawi</span>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="applications.html">Applications</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu"></button>
+    </div>
+  </header>
+
+  <main class="contact-page">
+    <h1>Contact Us</h1>
+
+    <div class="contact-container">
+      <section class="contact-details glass-panel">
+        <h2>Get in Touch</h2>
+        <ul class="contact-list">
+          <li><strong>Phone:</strong> +265 1 774 233</li>
+          <li><strong>Email:</strong> info@usf.mw</li>
+          <li><strong>Address:</strong> MACRA House, Salmin Amour Road, Blantyre, Malawi</li>
+        </ul>
+      </section>
+
+      <section class="contact-form glass-panel">
+        <h2>Send us a Message</h2>
+        <form id="contactForm" onsubmit="return validateForm(this)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn solid">Send Message</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/mobile-menu.js"></script>
+</body>
+</html>
